@@ -1,0 +1,11 @@
+{
+	"shell_cmd": "cd .. && xfce4-terminal -e 'bash -c \"make;echo;echo;  echo Press ENTER to continue; read line;exit; exec bash\"'",
+	"variants":
+  [
+      {
+          "name": "Clean",
+          "shell": true,
+          "shell_cmd": "cd .. && make clean"
+      }
+  ]    
+}
