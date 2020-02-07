@@ -1,14 +1,14 @@
 CXX 		= g++
-CXXEXT 		= cpp
+CXXEXT 	= cpp
 CXXFLAGS	= 
 
-SOURCE_PATH = Source
+SOURCE_PATH 	= Source
 BUILD_PATH 	= Build
 
 LIBRARIES	= -lsfml-graphics -lsfml-window -lsfml-system
-INCLUDE		= -I Include/
+INCLUDE	= -I Include/
 
-TARGET 		= run
+TARGET 	= run
 SOURCES 	= $(shell find $(SOURCE_PATH) -type f -name *.$(CXXEXT))
 OBJECTS 	= $(SOURCES:$(SOURCE_PATH)/%.$(CXXEXT)=$(BUILD_PATH)/%.o)
 
@@ -30,25 +30,3 @@ $(BUILD_PATH)/%.o: $(SOURCE_PATH)/%.$(CXXEXT)
 clean:
 	rm -r $(BUILD_PATH) $(TARGET)
 
-# struct Theme
-# 	{
-# 		Font	ConnectionFont;
-# 		Font 	NodeFont;
-# 		Color 	NodeTextColor;
-# 		Color 	NodeColor;
-# 		Color 	ConnectionTextColor;
-# 		Color 	ConnectionActiveColor;
-# 		Color 	ConnectionFinalColor;
-# 		int 	NodeTextSize;
-# 		int 	NodeSize;
-# 		int 	ConnectionTextSize;
-# 		int 	ConnectionArrowSize;
-# 	};
-# 	Theme Default;
-
-# void 	setConnectionFont (string path);
-# 	void 	setNodeFont (string path);
-# 	void	setNodeTextColor (int r, int g, int b);
-# 	void	setNodeColor (int r, int g, int b);
-# 	void	setNodeTextColor (int r, int g, int b);
-# 	void	setNodeTextColor (int r, int g, int b);
